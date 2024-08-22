@@ -1,0 +1,57 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="resources">
+        <div class="resource-box">
+            <p>Or : <span id="gold">0</span> (<span id="gold-rate">0/s</span>)</p>
+        </div>
+        <div class="resource-box">
+            <p>Énergie : <span id="energy">0</span> (<span id="energy-rate">0/s</span>)</p>
+        </div>
+        <div class="resource-box">
+            <p>Époque actuelle : <span id="current-epoch">2020</span></p>
+        </div>
+        <!-- Bouton de changement d'époque dans la section des ressources -->
+        <div class="resource-box" id="epoch-change-section" style="display: none;">
+            <button id="change-epoch-btn">Changer d'époque</button>
+        </div>
+    </div>
+
+    <div class="upgrade-section">
+        <!-- Conteneur pour les améliorations achetées -->
+        <div class="upgrade-status">
+            <h3>Améliorations achetées</h3>
+            <ul id="upgrade-list">
+                <!-- Liste des améliorations achetées sera générée ici -->
+            </ul>
+        </div>
+
+        <!-- Conteneurs d'upgrade -->
+        <div class="upgrade-container" id="upgrade-10-gold">
+            <div class="upgrade-content">
+                <div class="upgrade-description">
+                    <p>Débloque le changement d'époque.</p>
+                </div>
+                <div class="upgrade-price">
+                    <button id="upgrade-10-btn">Acheter l'upgrade (10 Or)</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="upgrade-container" id="upgrade-100-gold">
+            <div class="upgrade-content">
+                <div class="upgrade-description">
+                    <p>Augmente les ressources par seconde.</p>
+                </div>
+                <div class="upgrade-price">
+                    <button id="upgrade-100-btn">Acheter l'upgrade (100 Or)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upgrade.css') }}">
+{% endblock %}

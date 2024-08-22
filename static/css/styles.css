@@ -1,0 +1,55 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Assure que l'image couvre tout l'écran */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image de fond */
+    background-attachment: fixed; /* Garde l'image fixe en arrière-plan même lorsque le contenu défile */
+    min-height: 100vh; /* Assure que le body a une hauteur minimale de 100% de la hauteur de la vue */
+}
+
+/* Box pour chaque ressource */
+.resource-box {
+    display: flex; /* Utilise flexbox pour aligner le contenu à l'intérieur de chaque box */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource-box p {
+    margin: 5px 0;
+}
+
+.resource-box span {
+    font-weight: bold;
+}
+
+.resource-box .rate {
+    font-size: 0.9em;
+}
+
+/* Conteneur pour les ressources */
+.resources {
+    display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+    flex-wrap: wrap; /* Permet de passer à la ligne suivante si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement */
+    margin: 20px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}

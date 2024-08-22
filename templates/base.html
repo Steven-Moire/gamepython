@@ -1,0 +1,36 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Idle Game{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <h1>Idle Game</h1>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Fenêtre de félicitations -->
+    <div id="overlay"></div>
+    <div id="congrats">
+        <span id="close-congrats">X</span>
+        <h2>Bravo !</h2>
+        <p>Vous avez terminé le jeu !</p>
+        <p>Vous pouvez continuer à jouer si vous le souhaitez.</p>
+    </div>
+
+    <!-- Section pour le bouton de changement d'époque -->
+    <div id="epoch-change-section" style="display: none;">
+        <button id="change-epoch-btn">Changer d'époque</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

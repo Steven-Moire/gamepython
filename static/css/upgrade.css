@@ -1,0 +1,127 @@
+/* upgrade.css */
+
+/* Section contenant les améliorations achetées et les options d'upgrade */
+.upgrade-section {
+    display: flex;
+    flex-direction: row; /* Affiche les conteneurs d'upgrade en ligne */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    margin: 20px;
+    gap: 20px; /* Ajoute un espace entre les conteneurs */
+}
+
+/* Conteneur pour les améliorations achetées sur la gauche */
+.upgrade-status {
+    width: 200px; /* Largeur fixe pour la section des améliorations */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+}
+
+/* Liste des améliorations achetées */
+#upgrade-list {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0;
+    margin: 0;
+}
+
+/* Élément de la liste des améliorations */
+#upgrade-list li {
+    margin-bottom: 10px; /* Espace entre les éléments de la liste */
+    position: relative; /* Pour le positionnement absolu des infobulles */
+    padding: 5px;
+    cursor: pointer; /* Change le curseur pour indiquer que l'élément est interactif */
+}
+
+/* Infobulle pour les descriptions des améliorations */
+.upgrade-tooltip {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    left: 100%; /* Positionne à droite de l'élément */
+    top: 0;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Affiche l'infobulle au survol */
+#upgrade-list li:hover .upgrade-tooltip {
+    display: block;
+}
+
+/* Conteneur principal pour l'upgrade */
+.upgrade-container {
+    position: relative; /* Permet un positionnement relatif pour les éléments enfants si nécessaire */
+    padding: 20px; /* Ajoute du padding pour que le contenu ne touche pas les bords */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de la page */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    margin-bottom: 20px; /* Ajoute de l'espace en bas du conteneur pour séparer les conteneurs */
+}
+
+/* Conteneur pour la description et le prix de l'upgrade */
+.upgrade-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Prend toute la largeur disponible du conteneur principal */
+}
+
+/* Description de l'upgrade */
+.upgrade-description {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Prix de l'upgrade */
+.upgrade-price {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Prend toute la largeur disponible du conteneur principal */
+}
+
+#upgrade-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#upgrade-btn:hover {
+    background-color: #0056b3;
+}
+
+#epoch-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#epoch-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Section pour le bouton de changement d'époque */
+#epoch-change-section {
+    margin-top: 20px; /* Ajoute un espace au-dessus du bouton pour le séparer des autres éléments */
+    text-align: center; /* Centre le bouton horizontalement */
+}
